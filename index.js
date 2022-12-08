@@ -3,10 +3,8 @@ const port=8000;
 
 const app=express();
 
-app.get('/',function(req,res)
-{
-           return res.send("project is up and working");
-})
+app.use('/',require("./routes"));
+
 
 app.listen(port,function(err)
 {
